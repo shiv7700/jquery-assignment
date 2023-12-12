@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning jquery</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>learning jquery</h1>
+
+    <p class="tester">this is paragraph</p>
+
+    <h2>form</h2>
+    <div class="foramtting">
+        <div>
+            <form class="asg-2">
+                <label>Enter email</label>
+                <input type="email" class="email">
+                <div class="error-email"></div>
+                <label>Enter Password</label>
+                <input type="password" class="password">
+                <label>Enter Confirm Password</label>
+                <input type="password" class="confirm-password">
+                <div class="error-password"></div>
+
+                <div>
+                    <input type="checkbox" class="termCondition">
+                    <label>Please Agree To Terms and Conditions</label>
+                </div>
+
+                <input type="submit" value="submit form">
+            </form>
+        </div>
+    </div>
+
+
+    <h2>events in jquery</h2>
+    <a href="https://www.google.com/" class="event-test">events</a>
+
+    <h2>nested checkbox</h2>
+    <div class="custom-check">
+        <input type="checkbox" class="parent-check">
+        <label>property</label>
+        <div class="child-check">
+            <input type="checkbox" class="child-checkbox">
+            <label>Edit property</label>
+            <input type="checkbox" class="child-checkbox">
+            <label>remove property</label>
+            <input type="checkbox" class="child-checkbox">
+            <label>add property</label>
+        </div>
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
