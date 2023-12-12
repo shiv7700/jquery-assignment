@@ -1,0 +1,61 @@
+body {
+  font-family: system-ui;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.remove {
+  border: 0;
+  background-color: white;
+  color: grey;
+}
+
+.remove:hover {
+  cursor: pointer;
+}
+
+input[type="file"] {
+  width: 180px;
+}
+
+.add-another {
+  border: 0;
+  background-color: white;
+  color: grey;
+}
+
+.add-another:hover {
+  cursor: pointer;
+}
+
+.remove {
+  display: inline;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.c-1 {
+  width: 25%;
+  border: 2px solid grey;
+  padding: 20px;
+}
+
+.c-2 {
+  width: 70%;
+  border: 2px solid grey;
+  padding: 20px;
+}
+
+.property {
+  background-color: lightgrey;
+  margin: 0;
+  padding: 0;
+  width: 95%;
+  padding: 5px;
+}
