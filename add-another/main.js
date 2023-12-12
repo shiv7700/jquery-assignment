@@ -22,5 +22,5 @@ $(".add-another").click(function () {
 // });
 
 $(".result").on("click", ".remove", function () {
-  $(this).parent().remove(); // Remove the parent div
+  $(this).parent().remove();
 });
