@@ -1,26 +1,34 @@
-// add functionality
+$(document).ready(function () {
+  let initialValue = "primary";
 
-$(".add-another").click(function () {
-  let num = new Date().getTime();
-  const div = document.createElement("div");
-  div.innerHTML = `        <input type="file">
-        <select>
-            <option value="">primary</option>
-            <option value="">secondary</option>
-        </select>
-        <div class="remove">Remove</div>`;
-  div.className = `${num}`;
-  $(".result").append(div);
-});
+  // primary secondary functionality
+  $(".main").on("change", ".result select", function () {
+    const currentValue = $(this).val();
 
-// delete functionality
-// $(".remove").click(function () {
-//   console.log($(this).parent());
-//   $(this).parent().css("display", "none");
-//   $(this).parent().hide();
-//   console.log("working");
-// });
+    if (currentValue === "primary" && initialValue === "primary") {
+      alert("You have already selected the primary image");
+      $(this).val("secondary");
+    } else {
+      initialValue = currentValue;
+    }
+  });
 
-$(".result").on("click", ".remove", function () {
-  $(this).parent().remove();
+  // add functionality
+  $(".add-another").click(function () {
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <input type="file">
+      <select>
+      <option value="secondary">Secondary Image</option>
+      <option value="primary">primary Image</option>
+      </select>
+      <div class="remove">Remove</div>`;
+
+    $(".result").append(div);
+  });
+
+  // remove
+  $(".result").on("click", ".remove", function () {
+    $(this).parent().remove();
+  });
 });
